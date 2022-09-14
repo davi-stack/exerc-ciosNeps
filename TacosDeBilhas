@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.HashSet;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n;
+	    Scanner input = new Scanner(System.in);
+	    n = input.nextInt();
+	    HashSet tacos = new HashSet();
+	    int j;
+	    int tacosFabricados=0;
+	    for(int i=0;i<n;i++){
+	        j = input.nextInt();
+	        if(tacos.contains(j)){
+	         tacos.remove(j);
+	        }else{
+	            tacos.add(j);
+	            tacosFabricados+=2;
+	        }
+	    }
+		System.out.println(tacosFabricados);
+	}
+}
